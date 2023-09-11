@@ -1,0 +1,33 @@
+Spring:
+  application:
+    name: dayone-financial
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+      use-new-id-generator-mappings: false
+    show-sql: true
+    defer-datasource-initialization: true
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:dayone;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+
+  redis:
+    host: localhost
+    port: 6379
+
+  jwt:
+    secret:  6rCc67Cc7J6Q7KSA67mE7IOd7J2Y7IOI66Gc7Jq07ZSE66Gc7KCd7Yq47J6F64uI64uk7JWI64WV7ZWY7IS47Jes67mg7J207J6F64uI64uk
+
+
+scheduler:
+  scrap:
+    yahoo: "0 0 0 * * *"
